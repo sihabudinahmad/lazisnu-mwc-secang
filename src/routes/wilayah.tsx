@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { ClientOnly } from "@tanstack/react-router";
 import { lazy, Suspense } from "react";
 import { PageHeader } from "@/components/PageHeader";
 import { RANTING, RANTING_TOTAL, formatRp } from "@/data/lazisnu";
@@ -43,9 +44,11 @@ function WilayahPage() {
             <h2 className="font-display text-lg font-bold">Peta Persebaran Ranting</h2>
             <p className="text-sm text-muted-foreground">Klik marker untuk melihat detail tiap ranting.</p>
           </div>
-          <Suspense fallback={<div className="flex h-[480px] items-center justify-center text-sm text-muted-foreground">Memuat peta…</div>}>
-            <RantingMap />
-          </Suspense>
+          <ClientOnly fallback={<div className="flex h-[520px] items-center justify-center text-sm text-muted-foreground">Memuat peta…</div>}>
+            <Suspense fallback={<div className="flex h-[520px] items-center justify-center text-sm text-muted-foreground">Memuat peta…</div>}>
+              <RantingMap />
+            </Suspense>
+          </ClientOnly>
         </div>
       </section>
 
