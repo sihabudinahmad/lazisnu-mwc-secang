@@ -44,7 +44,7 @@ function LaporanPage() {
               <Pie data={SUMBER_DANA} dataKey="value" nameKey="name" innerRadius={60} outerRadius={100} paddingAngle={2}>
                 {SUMBER_DANA.map((_, i) => <Cell key={i} fill={PIE_COLORS[i % PIE_COLORS.length]} />)}
               </Pie>
-              <Tooltip formatter={(v: number) => formatRp(v)} />
+              <Tooltip formatter={(v) => formatRp(Number(v))} />
               <Legend />
             </PieChart>
           </ResponsiveContainer>
@@ -64,7 +64,7 @@ function LaporanPage() {
               <CartesianGrid strokeDasharray="3 3" opacity={0.3} />
               <XAxis type="number" unit="%" />
               <YAxis type="category" dataKey="name" width={130} tick={{ fontSize: 12 }} />
-              <Tooltip formatter={(v: number) => `${v}%`} />
+              <Tooltip formatter={(v) => `${v}%`} />
               <Bar dataKey="value" fill="#15803d" radius={[0, 6, 6, 0]} />
             </BarChart>
           </ResponsiveContainer>
