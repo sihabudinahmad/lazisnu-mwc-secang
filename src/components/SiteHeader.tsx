@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import logo from "@/assets/nu-care-lazisnu-logo.png";
 
 const NAV = [
   { to: "/", label: "Beranda" },
@@ -18,13 +19,11 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/85 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link to="/" className="flex items-center gap-2.5">
-          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-primary shadow-elegant">
-            <span className="font-display text-base font-bold text-primary-foreground">NU</span>
-          </div>
+        <Link to="/" className="flex items-center gap-3">
+          <img src={logo} alt="NU CARE LAZISNU" className="h-11 w-auto shrink-0" />
           <div className="leading-tight">
-            <div className="font-display text-sm font-bold text-foreground">LAZISNU</div>
-            <div className="text-[11px] font-medium text-muted-foreground">MWC Secang</div>
+            <div className="font-display text-sm font-bold text-foreground">NU CARE-LAZISNU</div>
+            <div className="text-[11px] font-semibold text-primary">MWC NU Secang</div>
           </div>
         </Link>
 
