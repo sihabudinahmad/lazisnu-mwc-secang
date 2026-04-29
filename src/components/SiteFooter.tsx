@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Mail, MapPin, Phone, Ambulance } from "lucide-react";
 import { ORG } from "@/data/lazisnu";
+import logo from "@/assets/nu-care-lazisnu-logo.png";
 
 export function SiteFooter() {
   return (
@@ -8,11 +9,12 @@ export function SiteFooter() {
       <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
         <div className="grid gap-10 md:grid-cols-3">
           <div>
-            <div className="flex items-center gap-2.5">
-              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-primary">
-                <span className="font-display text-base font-bold text-primary-foreground">NU</span>
+            <div className="flex items-center gap-3">
+              <img src={logo} alt="NU CARE LAZISNU" className="h-12 w-auto" />
+              <div className="leading-tight">
+                <div className="font-display text-base font-bold">NU CARE-LAZISNU</div>
+                <div className="text-xs font-semibold text-primary">MWC NU Secang</div>
               </div>
-              <div className="font-display text-base font-bold">LAZISNU MWC Secang</div>
             </div>
             <p className="mt-3 max-w-sm text-sm text-muted-foreground">
               Lembaga amil zakat, infaq, shodaqoh resmi MWC NU Kecamatan Secang. Amanah, transparan, profesional.
