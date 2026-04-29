@@ -1,0 +1,60 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { Calendar } from "lucide-react";
+import { PageHeader } from "@/components/PageHeader";
+import { KEGIATAN } from "@/data/lazisnu";
+
+export const Route = createFileRoute("/kegiatan")({
+  head: () => ({
+    meta: [
+      { title: "Kegiatan & Galeri — LAZISNU MWC Secang" },
+      { name: "description", content: "Dokumentasi kegiatan amal, sosial, dan donasi LAZISNU MWC Secang sepanjang tahun 2024." },
+    ],
+  }),
+  component: KegiatanPage,
+});
+
+const GRADIENTS = [
+  "from-emerald-500 to-emerald-700",
+  "from-amber-500 to-amber-700",
+  "from-rose-500 to-rose-700",
+  "from-blue-500 to-blue-700",
+  "from-violet-500 to-violet-700",
+  "from-teal-500 to-teal-700",
+];
+
+function KegiatanPage() {
+  return (
+    <>
+      <PageHeader
+        eyebrow="Galeri Kegiatan"
+        title="Kegiatan Amal & Sosial 2024"
+        description="Beragam program kegiatan yang menjangkau warga Nahdliyin di seluruh ranting Kecamatan Secang."
+      />
+
+      <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {KEGIATAN.map((k, i) => (
+            <article key={k.judul} className="group overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-all hover:-translate-y-1 hover:shadow-elegant">
+              <div className={`relative flex h-48 items-end bg-gradient-to-br ${GRADIENTS[i % GRADIENTS.length]} p-6 text-white`}>
+                <div className="absolute inset-0 opacity-20" style={{ backgroundImage: "radial-gradient(circle at 80% 20%, white 0, transparent 50%)" }} />
+                <div className="relative">
+                  <span className="inline-block rounded-full bg-white/20 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider backdrop-blur">
+                    {k.kategori}
+                  </span>
+                  <h3 className="mt-2 font-display text-xl font-bold leading-tight">{k.judul}</h3>
+                </div>
+              </div>
+              <div className="p-5">
+                <p className="text-sm leading-relaxed text-muted-foreground">{k.desc}</p>
+                <div className="mt-4 flex items-center gap-1.5 text-xs text-muted-foreground">
+                  <Calendar className="h-3.5 w-3.5" />
+                  <span>Tahun 2024</span>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+    </>
+  );
+}
