@@ -294,8 +294,8 @@ import img1 from "../assets/images/IMG_20251227_151203_848.jpg";
 import img2 from "../assets/images/IMG_20260308_174114_054.jpg";
 import img3 from "../assets/images/IMG_20260310_172546_594.jpg";
 import img4 from "../assets/images/IMG_20260317_140031_878.jpg";
-import img5 from "../assets/images/IMG_8402.JPG";
-import img6 from "../assets/images/IMG_8464.JPG";
+import img5 from "../assets/images/IMG_8402.jpg";
+import img6 from "../assets/images/IMG_8464.jpg";
 
 export const GALERI_KEGIATAN_DUMMY: Record<string, string[]> = {
   "maleha-malam-lailatul-husna": [img1, img2, img3],
