@@ -6,10 +6,10 @@ export const ORG = {
   tagline: "Manfaat Berlipat, Berkah Berlimpah",
   address: "Jl. Raya Secang–Payaman KM 4, Payaman, Secang, Magelang",
   email: "lazisnukecamatansecang@gmail.com",
-  phone: "0858-0332-4288",
-  ambulanceCallCenter: "0858-0332-4288",
-  ketua: "H. Moh. Fathul Aziz",
-  year: 2024,
+  phone: "085803324288",
+  ambulanceCallCenter: "0852-9005-1899",
+  ketua: "Anwari",
+  year: 2025,
 };
 
 export const VISI =
@@ -30,15 +30,15 @@ export const TUJUAN = [
 ];
 
 export const PENGURUS = [
-  { jabatan: "Ketua", nama: "H. Moh. Fathul Aziz" },
-  { jabatan: "Wakil Ketua", nama: "H. Ahmad Munir" },
-  { jabatan: "Sekretaris", nama: "Muhammad Nur Hadi" },
-  { jabatan: "Wakil Sekretaris", nama: "Slamet Riyadi" },
-  { jabatan: "Bendahara", nama: "H. Mahmud" },
-  { jabatan: "Wakil Bendahara", nama: "Nur Cholis" },
-  { jabatan: "Divisi Penghimpunan", nama: "Tim Penghimpun" },
-  { jabatan: "Divisi Pendayagunaan", nama: "Tim Tasyaruf" },
-  { jabatan: "Divisi Ambulance", nama: "Koordinator Ambulance" },
+  { jabatan: "Ketua", nama: "Anwari" },
+  { jabatan: "Wakil Ketua", nama: "Muh Tabi'in" },
+  { jabatan: "Sekretaris", nama: "Muhammad Syihabbudin S.Kom" },
+  { jabatan: "Wakil Sekretaris", nama: "Siti Mariyatul Kibtiyah, S.Pd" },
+  { jabatan: "Bendahara", nama: "Ibu Retno Eko S, S.E" },
+  { jabatan: "Wakil Bendahara", nama: "Sri Chayati, S.PdI" },
+  { jabatan: "Divisi Penghimpunan", nama: "M. Khalwani" },
+  { jabatan: "Divisi Pendayagunaan", nama: "M. Kholiq" },
+  { jabatan: "Divisi Ambulance", nama: "Nuryudi Darmawan" },
 ];
 
 export type Ranting = {
@@ -85,11 +85,9 @@ export const RANTING_TOTAL = {
 };
 
 export const SUMBER_DANA = [
-  { name: "Koin NU", value: 858_327_321 },
-  { name: "Infaq Lain", value: 288_421_639 },
-  { name: "Lain-lain", value: 132_079_808 },
-  { name: "Qurban", value: 15_000_000 },
-  { name: "Zakat", value: 300_000 },
+  { name: "Saldo Awal", value: 54_561_106 },
+  { name: "Donatur Tetap 2025", value: 73_062_066 },
+  { name: "Koin NU (5%) 2025", value: 40_389_575 },
 ];
 
 export const ALOKASI_DANA = [
@@ -118,12 +116,18 @@ export const TASYARUF_5_PILAR = [
 ];
 
 export const PERTUMBUHAN_KOTAK = [
-  { tahun: "2019", jumlah: 1600 },
-  { tahun: "2020", jumlah: 6156 },
-  { tahun: "2021", jumlah: 7063 },
-  { tahun: "2022", jumlah: 7648 },
-  { tahun: "2023", jumlah: 8099 },
-  { tahun: "2024", jumlah: 8230 },
+  { tahun: "Jan 2025", jumlah: 3_133_990 },
+  { tahun: "Feb 2025", jumlah: 3_167_823 },
+  { tahun: "Mar 2025", jumlah: 3_019_960 },
+  { tahun: "Apr 2025", jumlah: 3_225_920 },
+  { tahun: "Mei 2025", jumlah: 3_409_055 },
+  { tahun: "Jun 2025", jumlah: 3_410_620 },
+  { tahun: "Jul 2025", jumlah: 3_384_445 },
+  { tahun: "Agt 2025", jumlah: 3_365_055 },
+  { tahun: "Sep 2025", jumlah: 3_405_095 },
+  { tahun: "Okt 2025", jumlah: 3_759_553 },
+  { tahun: "Nov 2025", jumlah: 3_490_025 },
+  { tahun: "Des 2025", jumlah: 3_618_035 },
 ];
 
 export const PILAR = [
@@ -154,79 +158,171 @@ export const PILAR = [
   },
 ];
 
-// Laporan Keuangan Jan – Juni 2024
+// Laporan Keuangan Operasional Ambulans Tahun 2025
 export const KEUANGAN_SEMESTER = {
-  saldoAwal: 208_611_163,
+  saldoAwal: 54_561_106,
   penerimaan: [
-    { nama: "Koin NU Rumah", nilai: 415_499_400 },
-    { nama: "Koin NU Non Rumah", nilai: 1_886_000 },
-    { nama: "Infaq Lain", nilai: 114_772_142 },
-    { nama: "Zakat", nilai: 200_000 },
+    { nama: "Donatur Tetap 2025", nilai: 73_062_066 },
+    { nama: "Koin NU (5%) 2025", nilai: 40_389_575 },
   ],
-  totalPenerimaan: 532_357_542,
-  totalDana: 740_968_705,
+  totalPenerimaan: 113_451_641,
+  totalDana: 168_012_747,
   penyaluran: [
-    { nama: "Bagian Ranting", nilai: 281_594_711 },
-    { nama: "Kesehatan", nilai: 88_335_802 },
-    { nama: "Sosial Keagamaan", nilai: 74_047_000 },
-    { nama: "Operasional LazisNU", nilai: 31_614_221 },
-    { nama: "Operasional Ambulance", nilai: 19_210_071 },
-    { nama: "Bagian PC", nilai: 19_210_071 },
-    { nama: "Sosialisasi ZIS", nilai: 7_204_000 },
-    { nama: "Pendidikan", nilai: 3_000_000 },
-    { nama: "Siaga Bencana", nilai: 148_000 },
+    { nama: "Uang Makan Driver", nilai: 32_973_000 },
+    { nama: "BBM & Pemeliharaan Armada", nilai: 39_410_000 },
+    { nama: "Pengadaan Seragam Petugas", nilai: 680_000 },
   ],
-  totalPenyaluran: 524_363_876,
-  saldoAkhir: 216_604_829,
+  totalPenyaluran: 73_063_000,
+  saldoAkhir: 94_949_747,
 };
 
-// Saldo per November 2024
+// Saldo akhir per 31 Desember 2025 (nama konstanta dipertahankan untuk kompatibilitas komponen)
 export const SALDO_NOVEMBER = {
-  total: 184_205_912,
+  total: 94_949_747,
   perincian: [
-    { nama: "Koin NU", nilai: 83_426_055 },
-    { nama: "Operasional Ambulance dari Koin", nilai: 54_561_106 },
-    { nama: "Operasional LazisNU", nilai: 45_063_751 },
-    { nama: "Zakat", nilai: 700_000 },
-    { nama: "Lain-lain", nilai: 455_000 },
+    { nama: "Saldo Cadangan Peremajaan Unit", nilai: 94_949_747 },
   ],
   fisik: [
-    { nama: "Rekening BRI", nilai: 137_086_356 },
-    { nama: "Rekening BNU", nilai: 25_818_941 },
-    { nama: "Kas Tunai", nilai: 21_300_615 },
+    { nama: "Saldo Operasional Tersisa", nilai: 94_949_747 },
   ],
+};
+
+export type LaporanRow = { nama: string; nilai: number };
+export type LaporanTahunanData = {
+  sumberDana: { name: string; value: number }[];
+  alokasiDana: { name: string; value: number }[];
+  pertumbuhanKotak: { tahun: string; jumlah: number }[];
+  keuangan: {
+    saldoAwal: number;
+    penerimaan: LaporanRow[];
+    totalPenerimaan: number;
+    penyaluran: LaporanRow[];
+    totalPenyaluran: number;
+    saldoAkhir: number;
+  };
+  saldoNovember: {
+    total: number;
+    perincian: LaporanRow[];
+    fisik: LaporanRow[];
+  };
+};
+
+// Dataset laporan per tahun (2025 aktual, 2026 dummy dari dokumen aset Jan-Apr 2026).
+export const LAPORAN_TAHUNAN: Record<number, LaporanTahunanData> = {
+  2025: {
+    sumberDana: SUMBER_DANA,
+    alokasiDana: ALOKASI_DANA,
+    pertumbuhanKotak: PERTUMBUHAN_KOTAK,
+    keuangan: {
+      saldoAwal: KEUANGAN_SEMESTER.saldoAwal,
+      penerimaan: KEUANGAN_SEMESTER.penerimaan,
+      totalPenerimaan: KEUANGAN_SEMESTER.totalPenerimaan,
+      penyaluran: KEUANGAN_SEMESTER.penyaluran,
+      totalPenyaluran: KEUANGAN_SEMESTER.totalPenyaluran,
+      saldoAkhir: KEUANGAN_SEMESTER.saldoAkhir,
+    },
+    saldoNovember: SALDO_NOVEMBER,
+  },
+  2026: {
+    sumberDana: [
+      { name: "Saldo Awal", value: 94_949_747 },
+      { name: "Donatur Tetap 2026 (Jan–Apr)", value: 25_000_000 },
+      { name: "Koin NU (5%) 2026 (Jan–Apr)", value: 13_189_960 },
+    ],
+    alokasiDana: ALOKASI_DANA,
+    pertumbuhanKotak: [
+      { tahun: "Jan 2026", jumlah: 3_364_760 },
+      { tahun: "Feb 2026", jumlah: 3_309_450 },
+      { tahun: "Mar 2026", jumlah: 2_933_600 },
+      { tahun: "Apr 2026", jumlah: 3_582_150 },
+    ],
+    keuangan: {
+      saldoAwal: 94_949_747,
+      penerimaan: [
+        { nama: "Donatur Tetap 2026 (Jan–Apr)", nilai: 25_000_000 },
+        { nama: "Koin NU (5%) 2026 (Jan–Apr)", nilai: 13_189_960 },
+      ],
+      totalPenerimaan: 38_189_960,
+      penyaluran: [
+        { nama: "Uang Makan Driver (Jan–Apr)", nilai: 13_218_000 },
+        { nama: "BBM & Pemeliharaan Armada (Jan–Apr)", nilai: 14_899_000 },
+      ],
+      totalPenyaluran: 28_117_000,
+      saldoAkhir: 105_022_707,
+    },
+    saldoNovember: {
+      total: 105_022_707,
+      perincian: [
+        { nama: "Saldo Operasional Sementara (s.d. Apr 2026)", nilai: 105_022_707 },
+      ],
+      fisik: [
+        { nama: "Saldo Operasional Tersisa", nilai: 105_022_707 },
+      ],
+    },
+  },
 };
 
 export const AMBULANCE_PENYAKIT = [
-  { nama: "Ginjal", jumlah: 175 },
-  { nama: "Stroke", jumlah: 112 },
-  { nama: "Jantung", jumlah: 65 },
-  { nama: "Patah Tulang", jumlah: 51 },
-  { nama: "Kanker Usus", jumlah: 48 },
-  { nama: "Diabetes", jumlah: 42 },
-  { nama: "Lain-lain", jumlah: 188 },
+  { nama: "Gagal Ginjal (HD)", jumlah: 190 },
+  { nama: "Stroke", jumlah: 130 },
+  { nama: "Kanker & Tumor", jumlah: 105 },
+  { nama: "Patah Tulang", jumlah: 85 },
+  { nama: "Jantung", jumlah: 70 },
+  { nama: "Lain-lain", jumlah: 62 },
 ];
 
 export const AMBULANCE_ASAL = [
-  { nama: "Payaman", jumlah: 130 },
-  { nama: "Ngabean", jumlah: 87 },
-  { nama: "Kalijoso", jumlah: 82 },
-  { nama: "Madyocondro", jumlah: 78 },
-  { nama: "Donomulyo", jumlah: 70 },
-  { nama: "Krincing", jumlah: 32 },
-  { nama: "Pirikan", jumlah: 28 },
-  { nama: "Secang", jumlah: 25 },
-  { nama: "Lainnya", jumlah: 95 },
+  { nama: "Kalijoso", jumlah: 124 },
+  { nama: "Payaman", jumlah: 89 },
+  { nama: "Candisari", jumlah: 62 },
+  { nama: "Secang", jumlah: 60 },
+  { nama: "Jambewangi", jumlah: 41 },
+  { nama: "Lainnya", jumlah: 266 },
 ];
 
 export const KEGIATAN = [
-  { judul: "Maleha (Malam Lailatul Husna)", desc: "Kegiatan rutin tahunan untuk meningkatkan ukhuwah Nahdliyin.", kategori: "Sosial Keagamaan" },
-  { judul: "Qurban Idul Adha 1445 H", desc: "Penyembelihan & distribusi hewan qurban ke 20 ranting se-Kecamatan Secang.", kategori: "Sosial Keagamaan" },
-  { judul: "Santunan Anak Yatim", desc: "Bantuan rutin bulanan & tahunan untuk anak yatim warga NU.", kategori: "Sosial" },
-  { judul: "Periksa Kesehatan Gratis", desc: "Pengobatan & cek kesehatan gratis bagi dhuafa di tiap ranting.", kategori: "Kesehatan" },
-  { judul: "Layanan Takziah", desc: "Pendampingan keluarga duka serta layanan ambulance gratis.", kategori: "Sosial" },
-  { judul: "Beasiswa Santri", desc: "Bantuan biaya pendidikan untuk santri & siswa madrasah.", kategori: "Pendidikan" },
+  { slug: "maleha-malam-lailatul-husna", judul: "Maleha (Mahir Sembelih Halal)", desc: "Kegiatan rutin tahunan untuk meningkatkan skill jagal hewan Qurban.", kategori: "Sosial Keagamaan", tahun: 2025 },
+  { slug: "qurban-idul-adha-1445h", judul: "Qurban Idul Adha 1445 H", desc: "Penyembelihan & distribusi hewan qurban ke 20 ranting se-Kecamatan Secang.", kategori: "Sosial Keagamaan", tahun: 2025 },
+  { slug: "santunan-anak-yatim", judul: "Santunan Anak Yatim", desc: "Bantuan rutin bulanan & tahunan untuk anak yatim warga NU.", kategori: "Sosial", tahun: 2025 },
+  { slug: "periksa-kesehatan-gratis", judul: "Periksa Kesehatan Gratis", desc: "Pengobatan & cek kesehatan gratis bagi dhuafa di tiap ranting.", kategori: "Kesehatan", tahun: 2026 },
+  { slug: "layanan-takziah", judul: "Layanan Takziah", desc: "Pendampingan keluarga duka serta layanan ambulance gratis.", kategori: "Sosial", tahun: 2026 },
+  { slug: "beasiswa-santri", judul: "Beasiswa Santri", desc: "Bantuan biaya pendidikan untuk santri & siswa madrasah.", kategori: "Pendidikan", tahun: 2026 },
 ];
+
+const assetImage = (fileName: string) => new URL(`../assets/images/${fileName}`, import.meta.url).href;
+
+export const GALERI_KEGIATAN_DUMMY: Record<string, string[]> = {
+  "maleha-malam-lailatul-husna": [
+    assetImage("IMG_20251227_151203_848.jpg"),
+    assetImage("IMG_20260308_174114_054.jpg"),
+    assetImage("IMG_20260310_172546_594.jpg"),
+  ],
+  "qurban-idul-adha-1445h": [
+    assetImage("IMG_20260317_140031_878.jpg"),
+    assetImage("IMG_8402.JPG"),
+  ],
+  "santunan-anak-yatim": [
+    assetImage("IMG_8464.JPG"),
+    assetImage("IMG_20251227_151203_848.jpg"),
+    assetImage("IMG_20260308_174114_054.jpg"),
+  ],
+  "periksa-kesehatan-gratis": [
+    assetImage("IMG_20260310_172546_594.jpg"),
+    assetImage("IMG_20260317_140031_878.jpg"),
+    assetImage("IMG_8402.JPG"),
+  ],
+  "layanan-takziah": [
+    assetImage("IMG_8464.JPG"),
+    assetImage("IMG_20251227_151203_848.jpg"),
+    assetImage("IMG_20260308_174114_054.jpg"),
+  ],
+  "beasiswa-santri": [
+    assetImage("IMG_20260310_172546_594.jpg"),
+    assetImage("IMG_20260317_140031_878.jpg"),
+    assetImage("IMG_8402.JPG"),
+    assetImage("IMG_8464.JPG"),
+  ],
+};
 
 export function formatRp(n: number) {
   return "Rp " + n.toLocaleString("id-ID");
