@@ -53,28 +53,29 @@ export type Ranting = {
   lng: number;
 };
 
-// Approximate coordinates around Kec. Secang (-7.45, 110.23)
+// Approximate coordinates around Kec. Secang based on Google Maps embed source
+// Center reference: -7.417686, 110.213089
 export const RANTING: Ranting[] = [
-  { no: 1, nama: "Payaman", kotak: 733, tersebar: 730, terdata: 730, total: 162_414_600, lat: -7.4385, lng: 110.2470 },
-  { no: 2, nama: "Pucang", kotak: 412, tersebar: 412, terdata: 380, total: 30_024_850, lat: -7.4290, lng: 110.2305 },
-  { no: 3, nama: "Jambewangi", kotak: 205, tersebar: 170, terdata: 135, total: 23_465_700, lat: -7.4150, lng: 110.2560 },
-  { no: 4, nama: "Purwosari", kotak: 184, tersebar: 130, terdata: 115, total: 0, lat: -7.4205, lng: 110.2120 },
-  { no: 5, nama: "Ngabean", kotak: 521, tersebar: 515, terdata: 504, total: 34_839_000, lat: -7.4475, lng: 110.2235 },
-  { no: 6, nama: "Candiretno", kotak: 595, tersebar: 595, terdata: 330, total: 47_355_850, lat: -7.4625, lng: 110.2150 },
-  { no: 7, nama: "Madyocondro", kotak: 408, tersebar: 366, terdata: 337, total: 14_062_000, lat: -7.4715, lng: 110.2295 },
-  { no: 8, nama: "Donorejo", kotak: 209, tersebar: 159, terdata: 149, total: 5_491_000, lat: -7.4685, lng: 110.2030 },
-  { no: 9, nama: "Kalijoso", kotak: 546, tersebar: 546, terdata: 546, total: 59_988_150, lat: -7.4555, lng: 110.2410 },
-  { no: 10, nama: "Candisari", kotak: 388, tersebar: 388, terdata: 212, total: 40_314_000, lat: -7.4530, lng: 110.2625 },
-  { no: 11, nama: "Ngadirojo", kotak: 298, tersebar: 280, terdata: 280, total: 29_253_100, lat: -7.4810, lng: 110.2475 },
-  { no: 12, nama: "Pirikan", kotak: 726, tersebar: 720, terdata: 720, total: 53_063_100, lat: -7.4905, lng: 110.2350 },
-  { no: 13, nama: "Secang", kotak: 433, tersebar: 385, terdata: 385, total: 43_114_400, lat: -7.4505, lng: 110.2510 },
-  { no: 14, nama: "Karangkajen", kotak: 266, tersebar: 266, terdata: 266, total: 7_494_000, lat: -7.4395, lng: 110.2655 },
-  { no: 15, nama: "Pancuranmas", kotak: 460, tersebar: 455, terdata: 419, total: 38_176_500, lat: -7.4750, lng: 110.2620 },
-  { no: 16, nama: "Krincing", kotak: 541, tersebar: 541, terdata: 541, total: 61_332_100, lat: -7.4860, lng: 110.2185 },
-  { no: 17, nama: "Girikulon", kotak: 170, tersebar: 170, terdata: 0, total: 18_750_000, lat: -7.4225, lng: 110.2715 },
-  { no: 18, nama: "Sidomulyo", kotak: 539, tersebar: 539, terdata: 507, total: 25_813_600, lat: -7.4310, lng: 110.2185 },
-  { no: 19, nama: "Madusari", kotak: 378, tersebar: 372, terdata: 361, total: 37_125_600, lat: -7.4640, lng: 110.2740 },
-  { no: 20, nama: "Donomulyo", kotak: 218, tersebar: 218, terdata: 218, total: 20_263_800, lat: -7.4080, lng: 110.2415 },
+  { no: 1, nama: "Payaman", kotak: 733, tersebar: 730, terdata: 730, total: 162_414_600, lat: -7.425875305519056, lng: 110.22950805920843 },
+  { no: 2, nama: "Pucang", kotak: 412, tersebar: 412, terdata: 380, total: 30_024_850, lat: -7.416149361121759, lng: 110.25685666721351 }, 
+  { no: 3, nama: "Jambewangi", kotak: 205, tersebar: 170, terdata: 135, total: 23_465_700, lat: -7.434166956595797, lng: 110.22466360272482}, 
+  { no: 4, nama: "Purwosari", kotak: 184, tersebar: 130, terdata: 115, total: 0, lat: -7.394856415538512, lng: 110.28877212309888 }, 
+  { no: 5, nama: "Ngabean", kotak: 521, tersebar: 515, terdata: 504, total: 34_839_000, lat: -7.381098778342567, lng: 110.23565896141984 }, 
+  { no: 6, nama: "Candiretno", kotak: 595, tersebar: 595, terdata: 330, total: 47_355_850, lat: -7.428782035750562, lng: 110.24766037967832 }, 
+  { no: 7, nama: "Madyocondro", kotak: 408, tersebar: 366, terdata: 337, total: 14_062_000, lat: -7.396424443239924, lng: 110.23057251250492 }, 
+  { no: 8, nama: "Donorejo", kotak: 209, tersebar: 159, terdata: 149, total: 5_491_000, lat: -7.391750324393369, lng: 110.26920691866268 },
+  { no: 9, nama: "Kalijoso", kotak: 546, tersebar: 546, terdata: 546, total: 59_988_150, lat: -7.414566650123399, lng: 110.22257191605789 }, 
+  { no: 10, nama: "Candisari", kotak: 388, tersebar: 388, terdata: 212, total: 40_314_000, lat: -7.406034657994006, lng: 110.2574808870089 }, 
+  { no: 11, nama: "Ngadirojo", kotak: 298, tersebar: 280, terdata: 280, total: 29_253_100, lat: -7.410135543555147, lng: 110.230644997428 }, 
+  { no: 12, nama: "Pirikan", kotak: 726, tersebar: 720, terdata: 720, total: 53_063_100, lat: -7.4260433691698955, lng: 110.26091973262649 }, 
+  { no: 13, nama: "Secang", kotak: 433, tersebar: 385, terdata: 385, total: 43_114_400, lat: -7.388468573018243, lng: 110.24536420203442 }, 
+  { no: 14, nama: "Karangkajen", kotak: 266, tersebar: 266, terdata: 266, total: 7_494_000, lat: -7.393547246029715, lng: 110.27759374631157 }, 
+  { no: 15, nama: "Pancuranmas", kotak: 460, tersebar: 455, terdata: 419, total: 38_176_500, lat: -7.454945710554546, lng: 110.23094335059251 }, 
+  { no: 16, nama: "Krincing", kotak: 541, tersebar: 541, terdata: 541, total: 61_332_100, lat: -7.384752991196401, lng: 110.25572487010412 }, 
+  { no: 17, nama: "Girikulon", kotak: 170, tersebar: 170, terdata: 0, total: 18_750_000, lat: -7.418736169875916, lng: 110.28035926067652 },
+  { no: 18, nama: "Sidomulyo", kotak: 539, tersebar: 539, terdata: 507, total: 25_813_600, lat: -7.4122014233018145, lng: 110.26904870218483 },
+  { no: 19, nama: "Madusari", kotak: 378, tersebar: 372, terdata: 361, total: 37_125_600, lat: -7.412085905167875, lng: 110.2408695895241 },
+  { no: 20, nama: "Donomulyo", kotak: 218, tersebar: 218, terdata: 218, total: 20_263_800, lat: -7.409016769493634, lng: 110.28287151914509 },
 ];
 
 export const RANTING_TOTAL = {

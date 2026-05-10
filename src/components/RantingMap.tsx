@@ -7,7 +7,7 @@ export default function RantingMap() {
   return (
     <div className="h-[520px] w-full">
       <MapContainer
-        center={[-7.4505, 110.2400]}
+        center={[-7.417686, 110.213089]}
         zoom={12}
         scrollWheelZoom={false}
         style={{ height: "100%", width: "100%" }}
