@@ -17,6 +17,7 @@ import { Route as KontakRouteImport } from './routes/kontak'
 import { Route as KegiatanRouteImport } from './routes/kegiatan'
 import { Route as AmbulanceRouteImport } from './routes/ambulance'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as KegiatanSlugRouteImport } from './routes/kegiatan.$slug'
 
 const WilayahRoute = WilayahRouteImport.update({
   id: '/wilayah',
@@ -58,37 +59,45 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const KegiatanSlugRoute = KegiatanSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => KegiatanRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/ambulance': typeof AmbulanceRoute
-  '/kegiatan': typeof KegiatanRoute
+  '/kegiatan': typeof KegiatanRouteWithChildren
   '/kontak': typeof KontakRoute
   '/laporan': typeof LaporanRoute
   '/program': typeof ProgramRoute
   '/tentang': typeof TentangRoute
   '/wilayah': typeof WilayahRoute
+  '/kegiatan/$slug': typeof KegiatanSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/ambulance': typeof AmbulanceRoute
-  '/kegiatan': typeof KegiatanRoute
+  '/kegiatan': typeof KegiatanRouteWithChildren
   '/kontak': typeof KontakRoute
   '/laporan': typeof LaporanRoute
   '/program': typeof ProgramRoute
   '/tentang': typeof TentangRoute
   '/wilayah': typeof WilayahRoute
+  '/kegiatan/$slug': typeof KegiatanSlugRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/ambulance': typeof AmbulanceRoute
-  '/kegiatan': typeof KegiatanRoute
+  '/kegiatan': typeof KegiatanRouteWithChildren
   '/kontak': typeof KontakRoute
   '/laporan': typeof LaporanRoute
   '/program': typeof ProgramRoute
   '/tentang': typeof TentangRoute
   '/wilayah': typeof WilayahRoute
+  '/kegiatan/$slug': typeof KegiatanSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -101,6 +110,7 @@ export interface FileRouteTypes {
     | '/program'
     | '/tentang'
     | '/wilayah'
+    | '/kegiatan/$slug'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -111,6 +121,7 @@ export interface FileRouteTypes {
     | '/program'
     | '/tentang'
     | '/wilayah'
+    | '/kegiatan/$slug'
   id:
     | '__root__'
     | '/'
@@ -121,12 +132,13 @@ export interface FileRouteTypes {
     | '/program'
     | '/tentang'
     | '/wilayah'
+    | '/kegiatan/$slug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AmbulanceRoute: typeof AmbulanceRoute
-  KegiatanRoute: typeof KegiatanRoute
+  KegiatanRoute: typeof KegiatanRouteWithChildren
   KontakRoute: typeof KontakRoute
   LaporanRoute: typeof LaporanRoute
   ProgramRoute: typeof ProgramRoute
@@ -192,13 +204,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/kegiatan/$slug': {
+      id: '/kegiatan/$slug'
+      path: '/$slug'
+      fullPath: '/kegiatan/$slug'
+      preLoaderRoute: typeof KegiatanSlugRouteImport
+      parentRoute: typeof KegiatanRoute
+    }
   }
 }
+
+interface KegiatanRouteChildren {
+  KegiatanSlugRoute: typeof KegiatanSlugRoute
+}
+
+const KegiatanRouteChildren: KegiatanRouteChildren = {
+  KegiatanSlugRoute: KegiatanSlugRoute,
+}
+
+const KegiatanRouteWithChildren = KegiatanRoute._addFileChildren(
+  KegiatanRouteChildren,
+)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AmbulanceRoute: AmbulanceRoute,
-  KegiatanRoute: KegiatanRoute,
+  KegiatanRoute: KegiatanRouteWithChildren,
   KontakRoute: KontakRoute,
   LaporanRoute: LaporanRoute,
   ProgramRoute: ProgramRoute,
@@ -208,3 +239,12 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { createStart } from '@tanstack/react-start'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+  }
+}

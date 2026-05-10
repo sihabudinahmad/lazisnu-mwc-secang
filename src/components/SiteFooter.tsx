@@ -46,7 +46,7 @@ export function SiteFooter() {
         </div>
 
         <div className="mt-10 border-t border-border pt-6 text-center text-xs text-muted-foreground">
-          © {new Date().getFullYear()} UPZISNU CARE LAZISNU MWC NU Secang. Seluruh data bersumber dari Annual Report {ORG.year}.
+          © {new Date().getFullYear()} UPZISNU CARE LAZISNU MWC NU Secang.
         </div>
       </div>
     </footer>
