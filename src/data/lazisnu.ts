@@ -290,39 +290,20 @@ export const KEGIATAN = [
   { slug: "beasiswa-santri", judul: "Beasiswa Santri", desc: "Bantuan biaya pendidikan untuk santri & siswa madrasah.", kategori: "Pendidikan", tahun: 2026 },
 ];
 
-const assetImage = (fileName: string) => new URL(`../assets/images/${fileName}`, import.meta.url).href;
+import img1 from "../assets/images/IMG_20251227_151203_848.jpg";
+import img2 from "../assets/images/IMG_20260308_174114_054.jpg";
+import img3 from "../assets/images/IMG_20260310_172546_594.jpg";
+import img4 from "../assets/images/IMG_20260317_140031_878.jpg";
+import img5 from "../assets/images/IMG_8402.JPG";
+import img6 from "../assets/images/IMG_8464.JPG";
 
 export const GALERI_KEGIATAN_DUMMY: Record<string, string[]> = {
-  "maleha-malam-lailatul-husna": [
-    assetImage("IMG_20251227_151203_848.jpg"),
-    assetImage("IMG_20260308_174114_054.jpg"),
-    assetImage("IMG_20260310_172546_594.jpg"),
-  ],
-  "qurban-idul-adha-1445h": [
-    assetImage("IMG_20260317_140031_878.jpg"),
-    assetImage("IMG_8402.JPG"),
-  ],
-  "santunan-anak-yatim": [
-    assetImage("IMG_8464.JPG"),
-    assetImage("IMG_20251227_151203_848.jpg"),
-    assetImage("IMG_20260308_174114_054.jpg"),
-  ],
-  "periksa-kesehatan-gratis": [
-    assetImage("IMG_20260310_172546_594.jpg"),
-    assetImage("IMG_20260317_140031_878.jpg"),
-    assetImage("IMG_8402.JPG"),
-  ],
-  "layanan-takziah": [
-    assetImage("IMG_8464.JPG"),
-    assetImage("IMG_20251227_151203_848.jpg"),
-    assetImage("IMG_20260308_174114_054.jpg"),
-  ],
-  "beasiswa-santri": [
-    assetImage("IMG_20260310_172546_594.jpg"),
-    assetImage("IMG_20260317_140031_878.jpg"),
-    assetImage("IMG_8402.JPG"),
-    assetImage("IMG_8464.JPG"),
-  ],
+  "maleha-malam-lailatul-husna": [img1, img2, img3],
+  "qurban-idul-adha-1445h": [img4, img5],
+  "santunan-anak-yatim": [img6, img1, img2],
+  "periksa-kesehatan-gratis": [img3, img4, img5],
+  "layanan-takziah": [img6, img1, img2],
+  "beasiswa-santri": [img3, img4, img5, img6],
 };
 
 export function formatRp(n: number) {
