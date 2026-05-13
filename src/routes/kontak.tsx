@@ -33,7 +33,7 @@ function KontakPage() {
         <div className="overflow-hidden rounded-2xl border border-border shadow-elegant">
           <iframe
             title="Lokasi LAZISNU MWC Secang"
-            src="https://www.openstreetmap.org/export/embed.html?bbox=110.21%2C-7.46%2C110.27%2C-7.43&layer=mapnik&marker=-7.4385%2C110.2470"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=110.21%2C-7.46%2C110.27%2C-7.43&layer=mapnik&marker= -7.425875305519056%2C110.22950805920843"
             className="h-full min-h-[420px] w-full"
             loading="lazy"
           />
