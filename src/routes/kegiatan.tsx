@@ -1,7 +1,7 @@
 import { Link, Outlet, createFileRoute, useRouterState } from "@tanstack/react-router";
 import { Calendar } from "lucide-react";
 import { PageHeader } from "@/components/PageHeader";
-import { KEGIATAN } from "@/data/lazisnu";
+import { GALERI_KEGIATAN_DUMMY, KEGIATAN } from "@/data/lazisnu";
 
 export const Route = createFileRoute("/kegiatan")({
   head: () => ({
@@ -43,6 +43,15 @@ function KegiatanPage() {
           {KEGIATAN.map((k, i) => (
             <article key={k.slug} className="group overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-all hover:-translate-y-1 hover:shadow-elegant">
               <div className={`relative flex h-48 items-end bg-gradient-to-br ${GRADIENTS[i % GRADIENTS.length]} p-6 text-white`}>
+                {GALERI_KEGIATAN_DUMMY[k.slug]?.[0] ? (
+                  <img
+                    src={GALERI_KEGIATAN_DUMMY[k.slug][0]}
+                    alt={k.judul}
+                    loading="lazy"
+                    className="absolute inset-0 h-full w-full object-cover"
+                  />
+                ) : null}
+                <div className="absolute inset-0 bg-black/40" />
                 <div className="absolute inset-0 opacity-20" style={{ backgroundImage: "radial-gradient(circle at 80% 20%, white 0, transparent 50%)" }} />
                 <div className="relative">
                   <span className="inline-block rounded-full bg-white/20 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider backdrop-blur">
